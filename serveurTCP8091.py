@@ -30,6 +30,10 @@ while True:
         print("mise en route video")
     if 'voff' in str(msg_recu):
         print("arret de la video")
+    if 'lon' in str(msg_recu):
+        print("mise en route Led")
+    if 'loff' in str(msg_recu):
+        print("arret de la Led")
     if 'reboot' in str(msg_recu):
         print("redemarrage du system")
     print(msg_recu)
