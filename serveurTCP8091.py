@@ -37,7 +37,7 @@ while True:
     if 'reboot' in str(msg_recu):
         print("redemarrage du system")
     print(msg_recu)
-    connexion_avec_client.sendall(msg_recu)
+    # !!! # connexion_avec_client.sendall(msg_recu)
 
 print("Fermeture de la connexion")
 connexion_avec_client.close()
