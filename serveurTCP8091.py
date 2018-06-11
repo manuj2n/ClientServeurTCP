@@ -19,8 +19,8 @@ connexion_principale.bind((hote, port))
 connexion_principale.listen(5)
 print("Le serveur ecoute sur le port {}".format(port))
 connexion_avec_client, infos_connexion = connexion_principale.accept()
-msg_recu = ""
 
+msg_recu = ""
 while True:
     msg_recu = connexion_avec_client.recv(1024)
     if 'fin' in str(msg_recu):
