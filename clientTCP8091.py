@@ -4,7 +4,7 @@
 
 import socket
 
-hote = '127.0.0.1'
+hote = '192.168.1.12'
 port = 8091
 
 connexion_avec_serveur = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -19,7 +19,7 @@ while msg_a_envoyer != "fin":
     # On envoie le message
     connexion_avec_serveur.send(msg_a_envoyer.encode())
     msg_recu = connexion_avec_serveur.recv(1024)
-    print(msg_recu.decode()) # Là encore, peut planter s'il y a des accents
+    print(msg_recu.decode())
 
 print("Fermeture de la connexion")
 connexion_avec_serveur.close()

@@ -1,13 +1,19 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
-# manuj2n
+#
+# serveurTCP8091
 
 import socket
+import sys
+import os
 import string
 
 hote = '127.0.0.1'
 port = 8091
 
+strTabAdresseIP = os.popen( './returnHostname.sh').readlines()
+hote = strTabAdresseIP[0]
+print(hote)
 connexion_principale = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connexion_principale.bind((hote, port))
 connexion_principale.listen(5)
