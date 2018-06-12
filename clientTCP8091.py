@@ -1,10 +1,10 @@
-#! /usr/bin/python3
+#! /usr/bin/python3.5
 # -*- coding: utf-8 -*-
 # manuj2n
 
 import socket
 
-hote = '192.168.1.12'
+hote = '10.8.0.18'
 port = 8091
 
 connexion_avec_serveur = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
